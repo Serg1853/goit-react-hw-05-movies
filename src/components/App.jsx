@@ -1,5 +1,5 @@
-import { Home } from 'pages/Home';
-import { Movies } from 'pages/Movies';
+import Home from 'pages/Home';
+import Movies from 'pages/Movies';
 import { NavLink, Routes, Route } from 'react-router-dom';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 // import fetchFilms from 'service/api';

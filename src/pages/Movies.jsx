@@ -1,4 +1,4 @@
-export const Movies = () => {
+const Movies = () => {
   return <h1>Movies page</h1>;
 };
-// export default Movies;
+export default Movies;
