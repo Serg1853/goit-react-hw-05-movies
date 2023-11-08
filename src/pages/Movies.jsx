@@ -1,4 +1,21 @@
+// import { Link } from "react-router-dom";
+
 const Movies = () => {
-  return <h1>Movies page</h1>;
+  // ueseEffect (()=>{
+  // HTTP запит
+  // },[])
+
+  return (
+    <div>
+      {/* {movies.map(movie => {
+        return (
+          <Link key={movie} to={`${movie}`}>
+            {movie}
+          </Link>
+        )
+      })} */}
+      <h1>Movies page</h1>
+    </div>
+  );
 };
 export default Movies;
