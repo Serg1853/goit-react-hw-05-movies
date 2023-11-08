@@ -6,9 +6,8 @@ const endPoint = '/trending/movie/day';
 const Home = () => {
   const [films, setFilms] = useState([]);
   useEffect(() => {
-    if (films.length > 0) {
-      return;
-    }
+    if (!films) return;
+
     fetchMovies(endPoint)
       .then(data => {
         setFilms(data.results);
