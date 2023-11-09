@@ -1,30 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { LiStyle, UlStyle, WrapCardStyle } from './MoviesList.styled';
 
-const MovieList = ({ films }) => {
+const MoviesList = ({ films }) => {
+  const location = useLocation();
+
   return (
-    <ul>
+    <UlStyle>
       {films.map(({ id, title, overview, poster_path }) => (
-        <Link key={id} to={`/movies/${id}`}>
-          <li>
+        <Link to={`/movies/${id}`} state={{ from: location }}>
+          <LiStyle key={id}>
             <img
               src={
                 poster_path
                   ? `http://image.tmdb.org/t/p/w154${poster_path}`
-                  : `https://www.braasco.com//ASSETS/IMAGES/ITEMS/ZOOM/no_image.jpeg`
+                  : 'https://www.braasco.com//ASSETS/IMAGES/ITEMS/ZOOM/no_image.jpeg'
               }
               alt={title}
-              //   width="154"
-              //   height="231"
+              width="154"
+              height="231"
             />
-            <div>
+            <WrapCardStyle>
               <h3>{title}</h3>
               <p>{overview}</p>
-            </div>
-          </li>
+            </WrapCardStyle>
+          </LiStyle>
         </Link>
       ))}
-    </ul>
+    </UlStyle>
   );
 };
-export default MovieList;
+export default MoviesList;
