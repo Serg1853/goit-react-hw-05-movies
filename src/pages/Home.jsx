@@ -1,6 +1,6 @@
 import MovieList from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
-import fetchMovies, { onFetchError } from 'service/api';
+import { fetchMovies, onFetchError } from 'service/api';
 
 const endPoint = '/trending/movie/day';
 const Home = () => {

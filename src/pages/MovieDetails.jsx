@@ -1,12 +1,13 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MovieDetails = () => {
-  const params = useParams();
-  console.log('params', params);
+  // const params = useParams();
+
   return (
     <>
       <h3>MovieDetails page</h3>
-      <Link to={`/cast`}>Cast</Link>
+      <Link to={`cast`}>Cast</Link>
+      <Link to={`reviews`}>Reviews</Link>
       {/* <MovieDetails /> */}
     </>
   );
