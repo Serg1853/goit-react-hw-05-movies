@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom';
 export const SectionStyle = styled.section`
   padding: 20px;
   display: flex;
+  /* align-items: center; */
   flex-direction: column;
   gap: 20px;
 `;
 
 export const StyledLink = styled(Link)`
   text-align: center;
-  color: aquamarine;
+
+  color: #084833;
   font-weight: 600;
   padding: 6px;
-  border: 1px solid aquamarine;
+  border: 1px solid #084833;
   width: 100px;
   &.active {
     color: orange;

@@ -7,8 +7,8 @@ const MoviesList = ({ films }) => {
   return (
     <UlStyle>
       {films.map(({ id, title, overview, poster_path }) => (
-        <Link to={`/movies/${id}`} state={{ from: location }}>
-          <LiStyle key={id}>
+        <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
+          <LiStyle>
             <img
               src={
                 poster_path
@@ -16,8 +16,8 @@ const MoviesList = ({ films }) => {
                   : 'https://www.braasco.com//ASSETS/IMAGES/ITEMS/ZOOM/no_image.jpeg'
               }
               alt={title}
-              width="154"
-              height="231"
+              // width="154"
+              // height="231"
             />
             <WrapCardStyle>
               <h3>{title}</h3>

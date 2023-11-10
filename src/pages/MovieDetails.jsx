@@ -61,7 +61,6 @@ const MovieDetails = () => {
                   : 'https://www.braasco.com//ASSETS/IMAGES/ITEMS/ZOOM/no_image.jpeg'
               }
               alt={title}
-              width="200"
             />
             <CardStyle>
               <h3>{original_title}</h3>
