@@ -15,7 +15,7 @@ export async function fetchMovies(endPoint) {
   //    --url 'https://api.themoviedb.org/3/search/movie?query=Jack+Reacher&api_key=API_KEY'
 
   const url = `${URL}${endPoint}?api_key=${KEY}`;
-  const response = await axios(url);
+  const response = await axios.get(url);
   return response.data;
 }
 export async function fetchSearchMovies(endPoint, query) {
